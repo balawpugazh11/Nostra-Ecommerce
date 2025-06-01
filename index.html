@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nostra - Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body class="bg-white text-black font-sans">
+    <!-- Offer Bar -->
+    <div class="bg-gray-900 text-white text-xs sm:text-sm py-2 text-center px-2 relative">
+      Sign Up and <span class="font-bold">GET 20% OFF</span> for your first Order
+      <button id="offer-close" class="absolute right-2 top-1/2 transform -translate-y-1/2">✕</button>
+    </div>
+
+    <!-- Header -->
+    <header class="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-6 py-4 gap-2 sm:gap-0">
+      <div class="flex items-center justify-between w-full sm:w-auto">
+        <h1 class="text-2xl font-bold">Nostra</h1>
+        <button id="mobile-menu-button" class="sm:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden sm:block">
+        <ul class="flex items-center space-x-6">
+          <li><a href="#" class="hover:text-gray-600">Home</a></li>
+          <li><a href="./collections.html" class="hover:text-gray-600">Shop</a></li>
+          <li><a href="#about-section" class="hover:text-gray-600">About</a></li>
+          <li><a href="./contactus.html" class="hover:text-gray-600">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden">
+      <div class="bg-white w-64 h-full ml-auto p-6">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-xl font-bold">Menu</h2>
+          <button id="mobile-menu-close" class="text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <nav>
+          <ul class="space-y-4">
+            <li><a href="#" class="block py-2 hover:text-gray-600">Home</a></li>
+            <li><a href="./collections.html" class="block py-2 hover:text-gray-600">Shop</a></li>
+            <li><a href="#about-section" class="block py-2 hover:text-gray-600">About</a></li>
+            <li><a href="./contactus.html" class="block py-2 hover:text-gray-600">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative w-full max-w-screen-xl mx-auto px-2 sm:px-4 flex flex-col">
+      <div class="relative rounded-lg overflow-hidden">
+        <div class="slider-image-container flex transition-all duration-300">
+          <img
+            src="./img/others/slider-one.jpg"
+            alt="Hero"
+            class="w-full object-cover h-48 sm:h-[300px] md:h-[500px] flex-shrink-0"
+          />
+          <img
+            src="./img/others/slider-two.jpg"
+            alt="Hero"
+            class="w-full object-cover h-48 sm:h-[300px] md:h-[500px] flex-shrink-0"
+          />
+          <img
+            src="./img/others/slider-three.jpg"
+            alt="Hero"
+            class="w-full object-cover h-48 sm:h-[300px] md:h-[500px] flex-shrink-0"
+          />
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center text-white px-2">
+          <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-center">Level up your style with our</h2>
+          <p class="text-lg sm:text-xl md:text-2xl font-semibold mt-2">Summer Collections</p>
+          <button class="mt-4 bg-white text-black px-4 sm:px-6 py-2 rounded shadow hover:bg-gray-200 transition text-sm sm:text-base">Shop Now →</button>
+        </div>
+        <!-- Slider Controls -->
+        <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+          <button class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"></button>
+          <button class="w-2 h-2 rounded-full bg-white opacity-50 hover:opacity-100 transition"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="px-2 sm:px-6 py-10 text-center">
+      <h2 class="text-2xl font-bold mb-6">Brands</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-4 items-center justify-center">
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/behance.svg" class="w-8 h-8" alt="Behance" />
+          <p class="mt-2 text-sm">Puma</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/adidas.svg" class="w-8 h-8" alt="Adidas" />
+          <p class="mt-2 text-sm">Adidas</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/simpleicons.svg" class="w-8 h-8" alt="Simple" />
+          <p class="mt-2 text-sm">Simple</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/leaflet.svg" class="w-8 h-8" alt="Leaves" />
+          <p class="mt-2 text-sm">Leaves</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/behance.svg" class="w-8 h-8" alt="Behance" />
+          <p class="mt-2 text-sm">Behance</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/twitch.svg" class="w-8 h-8" alt="Twitch" />
+          <p class="mt-2 text-sm">Twitch</p>
+        </div>
+        <div class="flex flex-col items-center p-4 bg-gray-50 rounded-lg">
+          <img src="https://simpleicons.org/icons/leaflet.svg" class="w-8 h-8" alt="Leaves" />
+          <p class="mt-2 text-sm">Leaves</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Experience Section -->
+    <section id="about-section" class="px-2 sm:px-6 py-10 bg-white">
+      <div class="text-center md:flex md:justify-between md:items-center mb-8">
+        <h2 class="text-2xl font-bold mb-4 md:mb-0">
+          We Provide Best <br class="md:hidden" /> Customer Experiences
+        </h2>
+        <p class="text-gray-700 text-sm sm:text-base">|| We ensure that our customer have the best shopping experience</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition">
+          <div class="text-2xl mb-4">✔️</div>
+          <h3 class="font-bold mb-2">Original Products</h3>
+          <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition">
+          <div class="text-2xl mb-4">😊</div>
+          <h3 class="font-bold mb-2">Satisfaction Guarantee</h3>
+          <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition">
+          <div class="text-2xl mb-4">🧹</div>
+          <h3 class="font-bold mb-2">New Arrival Everyday</h3>
+          <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+        </div>
+        <div class="bg-gray-50 p-6 rounded-lg hover:shadow-md transition">
+          <div class="text-2xl mb-4">🚚</div>
+          <h3 class="font-bold mb-2">Fast & Free Shipping</h3>
+          <p class="text-sm text-gray-600">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section id="shop-section" class="max-w-7xl mx-auto px-2 sm:px-4 py-10">
+      <h2 class="text-3xl font-bold mb-6">New Arrivals</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/n1.jpg" alt="New Arrival 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Summer Dress</h3>
+            <p class="text-gray-600 text-sm mb-2">Floral Pattern</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$89.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/n2.jpg" alt="New Arrival 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Casual Shirt</h3>
+            <p class="text-gray-600 text-sm mb-2">Cotton Blend</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$49.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/n3.jpg" alt="New Arrival 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Denim Jacket</h3>
+            <p class="text-gray-600 text-sm mb-2">Classic Blue</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$79.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/n4.jpg" alt="New Arrival 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Leather Bag</h3>
+            <p class="text-gray-600 text-sm mb-2">Premium Quality</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$129.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Most Wanted Section -->
+    <section class="max-w-7xl mx-auto px-2 sm:px-4 py-10">
+      <h2 class="text-3xl font-bold mb-6">Most Wanted</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <!-- Product Card 1 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/f1.jpg" alt="Most Wanted 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Designer Watch</h3>
+            <p class="text-gray-600 text-sm mb-2">Luxury Collection</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$299.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/f2.jpg" alt="Most Wanted 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Sunglasses</h3>
+            <p class="text-gray-600 text-sm mb-2">UV Protection</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$89.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/f3.jpg" alt="Most Wanted 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Leather Shoes</h3>
+            <p class="text-gray-600 text-sm mb-2">Handcrafted</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$159.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="group relative bg-white rounded-lg shadow-md overflow-hidden">
+          <div class="relative">
+            <img src="img/products/f4.jpg" alt="Most Wanted 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+            <button class="like-button absolute top-2 right-2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+              <img src="img/icons/blackheart.png" alt="Like" class="w-5 h-5">
+            </button>
+          </div>
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-1">Designer Belt</h3>
+            <p class="text-gray-600 text-sm mb-2">Genuine Leather</p>
+            <div class="flex justify-between items-center">
+              <span class="font-bold">$69.99</span>
+              <button class="bg-gray-900 text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Limited Offer Section -->
+    <section class="bg-gray-900 text-white py-10 px-2 sm:px-4">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
+        <img src="https://images.pexels.com/photos/5322202/pexels-photo-5322202.jpeg?auto=compress&w=600" 
+             alt="Limited Offer" 
+             class="w-full max-w-xs sm:max-w-md rounded-lg object-cover mb-6 md:mb-0" />
+        <div class="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">Limited Offer</h2>
+          <p class="text-lg sm:text-xl md:text-2xl font-semibold mb-4">35% OFF on this for the first 30 Customers</p>
+          <button class="bg-white text-gray-900 px-6 py-3 rounded shadow hover:bg-gray-200 transition font-medium">Shop Now →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-12 sm:py-16 px-2 sm:px-4 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">Join our Newsletter</h2>
+        <p class="mb-8 text-base sm:text-lg">Signup for our email newspaper to get exclusive discounts, updates, and more</p>
+        <form class="flex flex-col md:flex-row items-center gap-4 max-w-2xl mx-auto">
+          <input type="email" 
+                 placeholder="Enter your email address" 
+                 class="w-full px-4 py-3 border-2 border-gray-300 rounded-md focus:outline-none focus:border-gray-900" 
+                 required />
+          <button type="submit" 
+                  class="w-full md:w-auto bg-gray-900 text-white px-6 py-3 rounded-md hover:bg-gray-800 transition flex items-center justify-center">
+            Subscribe
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 sm:py-12 px-4 sm:px-6">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Nostra</h2>
+        <p class="text-lg sm:text-2xl mb-8 max-w-3xl">The Standard chunk of Lorem ipsum used since the 1500s is reproduced below for those interested</p>
+        <div class="flex flex-col sm:flex-row items-center sm:space-x-8 mb-8 gap-4 sm:gap-0">
+          <a href="#" class="text-white hover:text-gray-400 transition">
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400 transition">
+            <i class="fab fa-twitter text-2xl"></i>
+          </a>
+          <a href="#" class="text-white hover:text-gray-400 transition">
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+        </div>
+        <div class="text-base sm:text-xl text-gray-300 text-center">&copy; 2024 Nostra.com</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

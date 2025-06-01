@@ -1,0 +1,79 @@
+.custom-card{
+background-image: url(./img/others/slider-one.jpg);
+height: 300px;
+width: 100%;
+background-size: cover;
+border-radius: 10px;
+}
+.custom-card:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offer Bar */
+.offer-bar {
+    position: relative;
+}
+
+/* Navigation */
+nav ul li a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #000;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Section Spacing */
+section {
+    scroll-margin-top: 80px; /* Adds some space when scrolling to a section */
+}
+
+/* Slider */
+.slider-image-container {
+    display: flex;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.slider-image-container img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Like Button */
+.like-button {
+    transition: transform 0.2s ease-in-out;
+}
+
+.like-button:hover {
+    transform: scale(1.1);
+}
+
+/* Scroll Animation */
+.initial-scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.reveal-scroll-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
